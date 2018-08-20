@@ -1,0 +1,22 @@
+package Gravitrips;
+
+public class Game {
+    public void game() {
+        Player computerPlayer = new ComputerPlayer();
+        Board board = new Board(6, 7);
+        Player humanPlayer = new HumanPlayer();
+
+        boolean playerWin = false;
+        boolean computerWin = false;
+
+        while (!playerWin && !computerWin) {
+            board.print();
+            humanPlayer.move(board.getArray());
+            playerWin = board.gameCheck(Token.X);
+            computerPlayer.move(board.getArray());
+            computerWin = board.gameCheck(Token.O);
+        }
+        board.print();
+
+    }
+}
