@@ -7,11 +7,11 @@ public class HumanPlayer extends Player {
         Scanner scanner = new Scanner(System.in);
         int input, i = 5;
         input = scanner.nextInt();
-        boolean a = false;
-        while (!a) {
+        boolean allow = false;
+        while (!allow) {
             if (array[i][input - 1] == Token.EMPTY) {
                 array[i][input - 1] = Token.X;
-                a = true;
+                allow = true;
             } else i--;
         }
     }
