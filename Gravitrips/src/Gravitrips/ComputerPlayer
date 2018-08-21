@@ -7,11 +7,11 @@ public class ComputerPlayer extends Player {
         Random random = new Random();
         int input, i = 5;
         input = random.nextInt(7);
-        boolean a = false;
-        while (!a) {
+        boolean allow = false;
+        while (!allow) {
             if (array[i][input] == Token.EMPTY) {
                 array[i][input] = Token.O;
-                a = true;
+                allow = true;
             } else i--;
         }
     }
